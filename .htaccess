@@ -1,0 +1,109 @@
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} /+[^\.]+$
+
+########################################## COMMUNES ##############################################
+
+# RULES TO GET COMMUNES BY COUNTRIES, REGIONS AND PROVINCES: LIST AND ONLY ONE
+
+RewriteRule ^countries/([0-9]+)/regions/([0-9]+)/provinces/([0-9]+)/communes/([0-9]+) index.php?controller=CommuneController&country=$1&region=$2&province=$3&commune=$4
+
+RewriteRule ^countries/([0-9]+)/regions/([0-9]+)/provinces/([0-9]+)/communes index.php?controller=CommuneController&country=$1&region=$2&province=$3
+
+# RULES TO GET COMMUNES BY COUNTRIES AND PROVINCES: LIST AND ONLY ONE
+
+RewriteRule ^countries/([0-9]+)/provinces/([0-9]+)/communes/([0-9]+) index.php?controller=CommuneController&country=$1&province=$2&commune=$3
+
+RewriteRule ^countries/([0-9]+)/provinces/([0-9]+)/communes index.php?controller=CommuneController&country=$1&province=$2
+
+# RULES TO GET COMMUNES BY COUNTRIES AND REGIONS: LIST AND ONLY ONE
+
+RewriteRule ^countries/([0-9]+)/regions/([0-9]+)/communes/([0-9]+) index.php?controller=CommuneController&country=$1&region=$2&commune=$3
+
+RewriteRule ^countries/([0-9]+)/regions/([0-9]+)/communes index.php?controller=CommuneController&country=$1&region=$2
+
+# RULES TO GET COMMUNES BY COUNTRIES: LIST AND ONLY ONE
+
+RewriteRule ^countries/([0-9]+)/communes/([0-9]+) index.php?controller=CommuneController&country=$1&commune=$2
+
+RewriteRule ^countries/([0-9]+)/communes index.php?controller=CommuneController&country=$1
+
+# RULES TO GET COMMUNES BY REGIONS AND PROVINCES: LIST AND ONLY ONE
+
+RewriteRule ^regions/([0-9]+)/provinces/([0-9]+)/communes/([0-9]+) index.php?controller=CommuneController&region=$1&province=$2&commune=$3
+
+RewriteRule ^regions/([0-9]+)/provinces/([0-9]+)/communes index.php?controller=CommuneController&region=$1&province=$2
+
+# RULES TO GET COMMUNES BY REGIONS: LIST AND ONLY ONE
+
+RewriteRule ^regions/([0-9]+)/communes/([0-9]+) index.php?controller=CommuneController&region=$1&commune=$2
+
+RewriteRule ^regions/([0-9]+)/communes index.php?controller=CommuneController&region=$1
+
+# RULES TO GET COMMUNES BY PROVINCES: LIST AND ONLY ONE
+
+RewriteRule ^provinces/([0-9]+)/communes/([0-9]+) index.php?controller=CommuneController&province=$1&commune=$2
+
+RewriteRule ^provinces/([0-9]+)/communes index.php?controller=CommuneController&province=$1
+
+# RULES TO GET COMMUNES: LIST AND ONLY ONE
+
+RewriteRule ^communes/([0-9]+) index.php?controller=CommuneController&commune=$1
+
+RewriteRule ^communes index.php?controller=CommuneController
+
+##################################################################################################
+
+########################################## PROVINCES ##############################################
+
+# RULES TO GET PROVINCES BY COUNTRIES AND REGIONS: LIST AND ONLY ONE
+
+RewriteRule ^countries/([0-9]+)/regions/([0-9]+)/provinces/([0-9]+) index.php?controller=ProvinceController&country=$1&region=$2&province=$3
+
+RewriteRule ^countries/([0-9]+)/regions/([0-9]+)/provinces index.php?controller=ProvinceController&country=$1&region=$2
+
+# RULES TO GET PROVINCES BY COUNTRIES: LIST AND ONLY ONE
+
+RewriteRule ^countries/([0-9]+)/provinces/([0-9]+) index.php?controller=ProvinceController&country=$1&province=$2
+
+RewriteRule ^countries/([0-9]+)/provinces index.php?controller=ProvinceController&country=$1
+
+# RULES TO GET PROVINCES BY REGIONS: LIST AND ONLY ONE
+
+RewriteRule ^regions/([0-9]+)/provinces/([0-9]+) index.php?controller=ProvinceController&region=$1&province=$2
+
+RewriteRule ^regions/([0-9]+)/provinces index.php?controller=ProvinceController&region=$1
+
+# RULES TO GET PROVINCES: LIST AND ONLY ONE
+
+RewriteRule ^provinces/([0-9]+) index.php?controller=ProvinceController&province=$1
+RewriteRule ^provinces index.php?controller=ProvinceController
+
+##################################################################################################
+
+########################################## REGIONS ##############################################
+
+#RULES TO GET REGIONS BY COUNTRIES: LIST AND ONLY ONE
+
+RewriteRule ^countries/([0-9]+)/regions/([0-9]+) index.php?controller=RegionController&country=$1&region=$2
+RewriteRule ^countries/([0-9]+)/regions index.php?controller=RegionController&country=$1
+
+#RULES TO GET REGIONS: LIST AND ONLY ONE
+
+RewriteRule ^regions/([0-9]+) index.php?controller=RegionController&region=$1
+RewriteRule ^regions index.php?controller=RegionController
+
+##################################################################################################
+
+########################################## COUNTRIES ##############################################
+
+#RULES TO GET COUNTRIES: LIST AND ONLY ONE
+
+RewriteRule ^countries/([0-9]+) index.php?controller=CountryController&country=$1
+RewriteRule ^countries index.php?controller=CountryController
+
+
+
+
+ 
