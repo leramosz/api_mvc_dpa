@@ -1,0 +1,176 @@
+<html>
+<head>
+<title>API DOCUMENTATION</title>
+
+<style>
+  table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+  }
+  th, td {
+      padding: 5px;
+      text-align: left;    
+  }
+</style>
+
+</head>
+<body>
+
+<H1>COUNTRIES</H1>
+
+<table id="table">
+	<tr>
+		<th>ENDPOINT</th>
+		<th>EXPLANATION</th>
+	</tr>
+	<tr>
+		<td>countries/</td>
+		<td>It returns a list of countries</td>
+	</tr>
+	<tr>
+		<td>countries/{id}/</td>
+		<td>It returns a country based on its ID</td>
+	</tr>
+</table>
+
+<H1>REGIONS</H1>
+
+<table id="table">
+	<tr>
+		<th>ENDPOINT</th>
+		<th>EXPLANATION</th>
+	</tr>
+	<tr>
+		<td>regions/</td>
+		<td>It returns a list of regions</td>
+	</tr>
+	<tr>
+		<td>regions/{id}/</td>
+		<td>It returns a region based on its ID</td>
+	</tr>
+	<tr>
+		<td>countries/{id}/regions/</td>
+		<td>It returns a list of regions based on a country ID</td>
+	</tr>
+	<tr>
+		<td>countries/{id}/regions/{id}/</td>
+		<td>It returns a region based on a country ID</td>
+	</tr>
+</table>
+
+<H1>PROVINCES</H1>
+
+<table id="table">
+	<tr>
+		<th>ENDPOINT</th>
+		<th>EXPLANATION</th>
+	</tr>
+	<tr>
+		<td>provinces/</td>
+		<td>It returns a list of provinces</td>
+	</tr>
+	<tr>
+		<td>provinces/{id}/</td>
+		<td>It returns a province based on its ID</td>
+	</tr>
+	<tr>
+		<td>regions/{id}/provinces/</td>
+		<td>It returns a list of provinces based on a region ID</td>
+	</tr>
+	<tr>
+		<td>regions/{id}/provinces/{id}/</td>
+		<td>It returns a province based on a region ID</td>
+	</tr>
+	<tr>
+		<td>countries/{id}/provinces/</td>
+		<td>It returns a list of provinces based on a country ID</td>
+	</tr>
+	<tr>
+		<td>countries/{id}/provinces/{id}/</td>
+		<td>It returns a province based on a country ID</td>
+	</tr>
+	<tr>
+		<td>countries/{id}/regions/{id}/provinces/</td>
+		<td>It returns a list of provinces based on a country and a region ID</td>
+	</tr>
+	<tr>
+		<td>countries/{id}/regions/{id}/provinces/{id}/</td>
+		<td>It returns a province based on a country and a region ID</td>
+	</tr>
+</table>
+
+<H1>COMMUNES</H1>
+
+<table id="table">
+	<tr>
+		<th>ENDPOINT</th>
+		<th>EXPLANATION</th>
+	</tr>
+	<tr>
+		<td>communes/</td>
+		<td>It returns a list of communes</td>
+	</tr>
+	<tr>
+		<td>communes/{id}/</td>
+		<td>It returns a commune based on its ID</td>
+	</tr>
+	<tr>
+		<td>provinces/{id}/communes/</td>
+		<td>It returns a list of communes based on a province ID</td>
+	</tr>
+	<tr>
+		<td>provinces/{id}/communes/{id}/</td>
+		<td>It returns a commune based on a province ID</td>
+	</tr>
+	<tr>
+		<td>regions/{id}/communes/</td>
+		<td>It returns a list of communes based on a region ID</td>
+	</tr>
+	<tr>
+		<td>regions/{id}/communes/{id}/</td>
+		<td>It returns a commune based on a region ID</td>
+	</tr>
+	<tr>
+		<td>regions/{id}/provinces/{id}/communes/</td>
+		<td>It returns a list of communes based on a region and a province ID</td>
+	</tr>
+	<tr>
+		<td>regions/{id}/provinces/{id}/communes/{id}/</td>
+		<td>It returns a commune based on a region and a province ID</td>
+	</tr>
+	<tr>
+		<td>countries/{id}/communes/</td>
+		<td>It returns a list of communes based on a country ID</td>
+	</tr>
+	<tr>
+		<td>countries/{id}/communes/{id}/</td>
+		<td>It returns a communes based on a country ID</td>
+	</tr>
+	<tr>
+		<td>countries/{id}/provinces/{id}/communes/</td>
+		<td>It returns a list of communes based on a country and a province ID</td>
+	</tr>
+	<tr>
+		<td>countries/{id}/provinces/{id}/communes/{id}/</td>
+		<td>It returns a communes based on a country and a provinces ID</td>
+	</tr>
+	<tr>
+		<td>countries/{id}/regions/{id}/communes/</td>
+		<td>It returns a list of communes based on a country and a region ID</td>
+	</tr>
+	<tr>
+		<td>countries/{id}/regions/{id}/communes/{id}/</td>
+		<td>It returns a communes based on a country and a region ID</td>
+	</tr>
+	<tr>
+		<td>countries/{id}/regions/{id}/provinces/{id}/communes/</td>
+		<td>It returns a list of communes based on a country, a region and a province ID</td>
+	</tr>
+	<tr>
+		<td>countries/{id}/regions/{id}/provinces/{id}/communes/{id}/</td>
+		<td>It returns a communes based on a country and a region and a province ID</td>
+	</tr>
+</table>
+
+</body>
+</html>

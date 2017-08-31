@@ -3,6 +3,10 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_URI} /+[^\.]+$
 
+RewriteRule ^documentation doc/index.html
+RewriteRule ^$ doc/index.html
+ErrorDocument 404 /dpa/doc/index.html
+
 ########################################## COMMUNES ##############################################
 
 # RULES TO GET COMMUNES BY COUNTRIES, REGIONS AND PROVINCES: LIST AND ONLY ONE
